@@ -1,2 +1,2 @@
 main: main.cpp
-	gcc -o 255 main.cpp
+	g++ -o 255 main.cpp
