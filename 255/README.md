@@ -11,6 +11,7 @@ Let's consider a simple search engine: one that searches over a large list of sh
 >        The MUJAC playmaker actually kinda sucked at karate.
 
 Typically, a search engine does not provide an easy way to simply search "everything", especially if it is a private service. Having people get access to all your data generally devalues the usefulness of only showing small bits of it (as a search engine does).
+
 We are going to force this (hypothetical) search engine to give us all of its results, by coming up with just the right inputs such that every one of its sayings is output at least once by all those searches. We will also be minimizing the number of searches we do, so we don't "overload" the search engine.
 
 #Formal input/output
@@ -20,18 +21,23 @@ The output must be a list of 5+ letter search queries. Each saying in the input 
 
 #Sample input
 
-Jack and Jill went up the hill to fetch a pail of water.
-All work and no play makes Jack and Jill a dull couple.
-The Manchester United Junior Athletic Club (MUJAC) karate team was super good at kicking.
-The MUJAC playmaker actually kinda sucked at karate.
+>Jack and Jill went up the hill to fetch a pail of water.
+>All work and no play makes Jack and Jill a dull couple.
+>The Manchester United Junior Athletic Club (MUJAC) karate team was super good at kicking.
+>The MUJAC playmaker actually kinda sucked at karate.
+
 #Sample output
 
 >layma
 >jacka
+
 There are multiple possible valid outputs. For example, this is another solution:
+
 >djill
 >mujac
+
 Also, while this is technically a valid solution, it is not an optimal one, since it does not have the minimum possible (in this case, 2) search queries:
+
 >jacka
 >allwo
 >thema
